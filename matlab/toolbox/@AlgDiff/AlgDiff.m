@@ -87,6 +87,8 @@ classdef AlgDiff <  matlab.mixin.CustomDisplay
                 && isempty(opts.CutoffFrequency)
 
                 % Default to FilterWindowLength=1 if neither is provided
+                warning("Neither FilterWindowLength nor CutoffFrequency specified." ...
+                    + " Defaulting to a filter window of length 1s");
                 opts.FilterWindowLength = 1;
 
             end
@@ -936,4 +938,3 @@ classdef AlgDiff <  matlab.mixin.CustomDisplay
         end
     end
 end
-
